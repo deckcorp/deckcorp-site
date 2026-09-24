@@ -133,7 +133,52 @@ footer svg{height:26px;width:auto}
 }
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.c-hero h1 .rot span.on{transform:none;opacity:1}.c-draw path{stroke-dashoffset:0}.c-draw circle{opacity:1}}
 
-.glow{display:none}
+.glow{position:absolute;width:640px;height:640px;border-radius:50%;background:radial-gradient(circle,rgba(31,157,92,.28),rgba(31,157,92,0) 62%);pointer-events:none;left:var(--mx,70%);top:var(--my,40%);transform:translate(-50%,-50%);transition:left .6s var(--ease),top .6s var(--ease)}
+.grid-bg{position:absolute;inset:0;background-image:linear-gradient(rgba(159,176,191,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(159,176,191,.05) 1px,transparent 1px);background-size:48px 48px;mask-image:radial-gradient(ellipse at 60% 40%,#000 20%,transparent 70%);pointer-events:none}
+.stack{position:relative;display:grid;gap:22px;justify-items:end;perspective:900px}
+.stack span{display:block;height:74px;border-radius:37px;box-shadow:0 20px 50px -18px rgba(0,0,0,.8);animation:barIn 1.1s var(--ease) both, floaty 6s ease-in-out infinite}
+.stack span:nth-child(1){width:100%;background:linear-gradient(135deg,var(--g-hi),#0f6b3d);box-shadow:0 18px 60px -12px rgba(31,157,92,.6);animation-delay:.55s,1.6s}
+.stack span:nth-child(2){width:91%;background:linear-gradient(135deg,var(--navy1),var(--navy2));animation-delay:.35s,1.9s}
+.stack span:nth-child(3){width:82%;background:linear-gradient(135deg,var(--navy3),var(--navy4));animation-delay:.15s,2.2s}
+.stack span:nth-child(1)::after{content:"";display:block;height:50%;border-radius:37px 37px 0 0;background:linear-gradient(rgba(255,255,255,.18),rgba(255,255,255,0))}
+@keyframes barIn{from{opacity:0;transform:translateY(-90px) rotateX(35deg)}to{opacity:1;transform:none}}
+@keyframes floaty{0%,100%{translate:0 0}50%{translate:0 -8px}}
+.stack .lbl{position:absolute;font:500 12px/1 var(--mono);color:var(--muted);background:rgba(17,24,32,.85);border:1px solid var(--line2);padding:7px 10px;border-radius:8px;animation:fadeUp .8s var(--ease) both}
+.stack .l1{top:18px;left:-6%;animation-delay:1.3s}.stack .l2{top:112px;left:0;animation-delay:1.45s}.stack .l3{top:208px;left:4%;animation-delay:1.6s}
+.marquee{border-block:1px solid var(--line);overflow:hidden;padding-block:18px;background:var(--void)}
+.marquee .track{display:flex;gap:44px;width:max-content;animation:mq 34s linear infinite;font:600 15px/1 var(--sans);color:var(--dim)}
+.marquee .track span{display:flex;align-items:center;gap:44px;white-space:nowrap}
+.marquee .track span::after{content:"";width:8px;height:8px;border-radius:2px;background:var(--g);opacity:.6}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* fundo vivo (vindo da versão A): grade andando + brilhos flutuando */
+.grid-bg{animation:gridPan 26s linear infinite}
+@keyframes gridPan{to{background-position:48px 48px,48px 48px}}
+.glow{animation:breathe 9s ease-in-out infinite}
+@keyframes breathe{0%,100%{opacity:.85;scale:1}50%{opacity:1;scale:1.18}}
+.orb{position:absolute;border-radius:50%;pointer-events:none;filter:blur(10px)}
+.orb.o1{width:520px;height:520px;left:-160px;top:40%;background:radial-gradient(circle,rgba(31,157,92,.20),transparent 65%);animation:drift1 22s ease-in-out infinite}
+.orb.o2{width:420px;height:420px;right:-120px;top:-80px;background:radial-gradient(circle,rgba(51,73,92,.45),transparent 65%);animation:drift2 28s ease-in-out infinite}
+@keyframes drift1{0%,100%{transform:translate(0,0)}33%{transform:translate(180px,-120px)}66%{transform:translate(60px,90px)}}
+@keyframes drift2{0%,100%{transform:translate(0,0)}50%{transform:translate(-200px,160px)}}
+.c-hero>.wrap{z-index:1}
+.c-top h1{font-size:clamp(44px,7.4vw,112px)}
+.contact-bg{position:relative;overflow:hidden}
+
+.c-hero{overflow:hidden}
+.c-hero .wrap{position:relative}
+.c-top{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,.65fr);gap:40px;align-items:center;margin-top:22px}
+.c-top .stack{justify-items:end}
+.stack .lbl{font-style:normal;transition:color .4s,border-color .4s,background .4s,box-shadow .4s}
+.stack .lbl.on{color:var(--g-bright);border-color:var(--g);background:rgba(16,38,29,.95);box-shadow:0 0 24px -6px rgba(31,157,92,.6)}
+.ld{animation:fadeUp .9s var(--ease) both}
+.ld.d1{animation-delay:.1s}.ld.d2{animation-delay:.2s}.ld.d3{animation-delay:.3s}
+.c-card{position:relative;overflow:hidden}
+.c-card::before{content:"";position:absolute;inset:0;background:radial-gradient(420px circle at var(--cx,50%) var(--cy,0%),rgba(107,240,161,.14),transparent 45%);opacity:0;transition:opacity .35s;pointer-events:none}
+.c-card:hover::before{opacity:1}
+.c-card:hover{border-color:var(--g-deep)}
+@media (max-width:980px){.c-top{grid-template-columns:1fr}.c-top .stack{max-width:360px;width:100%;justify-self:start;margin-top:8px}}
+@media (max-width:640px){.stack span{height:54px;border-radius:27px}.stack .l1{top:10px}.stack .l2{top:84px}.stack .l3{top:158px}}
 .legal{max-width:60ch}
 .skip{position:absolute;left:-999px;top:8px;z-index:200;background:var(--g);color:var(--on-g);padding:10px 14px;border-radius:8px}.skip:focus{left:8px}
 </style>
@@ -145,13 +190,14 @@ footer svg{height:26px;width:auto}
 <nav aria-label="Seções"><a href="#c-prod">Produtos</a><a href="#c-como">Como funciona</a><a href="#c-contato">Contato</a></nav>
 <a class="btn" href="#c-contato">Falar com a gente</a></div></header>
 
-<main id="conteudo"><section class="c-hero" id="topo"><div class="wrap">
- <span class="eyebrow">DeckCorp · tecnologia pra pequeno negócio · todo o Brasil</span>
- <h1 style="margin-top:22px">Tecnologia que<br><span class="rot" id="rot"><span class="on">atende</span><span>organiza</span><span>vende</span><span>trabalha</span></span><br>por você.</h1>
- <div class="row"><p class="lead">Atendente com IA no WhatsApp, comanda digital pra bar e restaurante, e sistemas sob medida. Atendimento 100% online pra todo o Brasil, com suporte direto de quem constrói.</p>
+<main id="conteudo"><section class="c-hero" id="topo"><div class="grid-bg"></div><div class="orb o1"></div><div class="orb o2"></div><div class="glow" id="glow"></div><div class="wrap">
+ <span class="eyebrow ld">DeckCorp · tecnologia pra pequeno negócio · todo o Brasil</span>
+ <div class="c-top"><h1 class="ld d1">Tecnologia que<br><span class="rot" id="rot"><span class="on">atende</span><span>organiza</span><span>vende</span><span>trabalha</span></span><br>por você.</h1><div class="stack ld d2" aria-hidden="true"><span></span><span></span><span></span><em class="lbl l1" data-w="atende">atende</em><em class="lbl l2" data-w="organiza">organiza</em><em class="lbl l3" data-w="vende">vende</em></div></div>
+ <div class="row ld d3"><p class="lead">Atendente com IA no WhatsApp, comanda digital pra bar e restaurante, e sistemas sob medida. Atendimento 100% online pra todo o Brasil, com suporte direto de quem constrói.</p>
  <div style="display:flex;gap:12px;flex-wrap:wrap"><a class="btn" href="#c-prod">Ver produtos <span class="arr">→</span></a><a class="btn ghost" href="#c-contato">Orçamento</a></div></div>
  <svg class="c-draw" viewBox="0 0 1180 140" aria-hidden="true" preserveAspectRatio="none"><path d="M0 110 C 180 110, 240 40, 420 60 S 700 120, 860 70 S 1080 20, 1180 30"/><path class="b" d="M0 125 C 200 125, 300 90, 480 95 S 760 130, 920 100 S 1100 70, 1180 75"/><circle cx="1180" cy="30" r="6"/></svg>
 </div></section>
+<div class="marquee" aria-hidden="true"><div class="track"><span>Atendimento no WhatsApp 24h</span><span>Comanda digital</span><span>Painéis de gestão</span><span>Automação de rotina</span><span>Sites e landing pages</span><span>Apps Android</span><span>Monitor 24h e backup diário</span><span>Atendimento no WhatsApp 24h</span><span>Comanda digital</span><span>Painéis de gestão</span><span>Automação de rotina</span><span>Sites e landing pages</span><span>Apps Android</span><span>Monitor 24h e backup diário</span></div></div>
 
 <section class="sec" id="c-prod" style="padding-top:40px"><div class="wrap">
 <div class="sec-h rv" style="margin-bottom:28px"><span class="eyebrow">Produtos · arraste pro lado</span><h2>Escolha por onde começar.</h2></div>
@@ -178,7 +224,7 @@ footer svg{height:26px;width:auto}
  <div class="rv-l"><span class="n">04</span><b>No ar</b><p>Publicado com vigia 24h, backup diário e suporte direto.</p></div>
 </div></div></section>
 
-<section class="sec" id="c-contato" style="padding-top:0"><div class="wrap"><div class="rv">
+<section class="sec contact-bg" id="c-contato"><div class="grid-bg"></div><div class="orb o1" style="top:10%"></div><div class="wrap" style="position:relative;z-index:1"><div class="rv">
 <span class="eyebrow">Contato</span><h2 style="font-size:clamp(40px,7vw,96px);line-height:.92;font-weight:900;letter-spacing:-.05em;margin-top:16px">Vamos<br>conversar?</h2>
 <div class="contact"><a href="#" data-wa target="_blank" rel="noopener"><span class="ic"><svg class="i" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 1-11.8 7L4 20l1.1-4.1A8 8 0 1 1 20 12z"/></svg></span><span><small>WhatsApp</small><b data-wa-txt>(82) 90000-0000</b></span></a>
 <a href="mailto:wan@deckcorp.com.br"><span class="ic"><svg class="i" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span><span><small>E-mail</small><b>wan@deckcorp.com.br</b></span></a></div>
@@ -201,8 +247,15 @@ document.querySelectorAll("[data-wa]").forEach(function(a){
   var n=d.slice(2),t=a.querySelector("[data-wa-txt]");if(t)t.textContent="("+n.slice(0,2)+") "+n.slice(2,-4)+"-"+n.slice(-4);
 });
 addEventListener("scroll",function(){document.querySelector(".nav").classList.toggle("scrolled",scrollY>8);},{passive:true});
-var rot=[].slice.call(document.querySelectorAll("#rot span")),ri=0;
-if(!reduce)setInterval(function(){var a=rot[ri];ri=(ri+1)%rot.length;var b=rot[ri];a.classList.remove("on");a.classList.add("out");b.classList.remove("out");b.classList.add("on");setTimeout(function(){a.classList.remove("out");},700);},2200);
+var rot=[].slice.call(document.querySelectorAll("#rot span")),ri=0,lbls=[].slice.call(document.querySelectorAll(".stack .lbl"));
+function syncLbl(w){lbls.forEach(function(l){l.classList.toggle("on",l.dataset.w===w);});}
+syncLbl(rot[0].textContent);
+if(!reduce)setInterval(function(){var a=rot[ri];ri=(ri+1)%rot.length;var b=rot[ri];a.classList.remove("on");a.classList.add("out");b.classList.remove("out");b.classList.add("on");syncLbl(b.textContent);setTimeout(function(){a.classList.remove("out");},700);},2200);
+/* brilho que segue o mouse no topo */
+var hero=document.getElementById("topo"),glow=document.getElementById("glow");
+if(!reduce&&hero&&glow)hero.addEventListener("pointermove",function(e){var r=hero.getBoundingClientRect();glow.style.setProperty("--mx",(e.clientX-r.left)+"px");glow.style.setProperty("--my",(e.clientY-r.top)+"px");});
+/* luz que acompanha o mouse nos cards */
+document.querySelectorAll(".c-card").forEach(function(c){c.addEventListener("pointermove",function(e){var r=c.getBoundingClientRect();c.style.setProperty("--cx",(e.clientX-r.left)+"px");c.style.setProperty("--cy",(e.clientY-r.top)+"px");});});
 })();
 </script>
 </body>
