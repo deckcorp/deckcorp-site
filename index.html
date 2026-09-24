@@ -181,13 +181,23 @@ footer svg{height:26px;width:auto}
 @media (max-width:640px){.stack span{height:54px;border-radius:27px}.stack .l1{top:10px}.stack .l2{top:84px}.stack .l3{top:158px}}
 .legal{max-width:60ch}
 .skip{position:absolute;left:-999px;top:8px;z-index:200;background:var(--g);color:var(--on-g);padding:10px 14px;border-radius:8px}.skip:focus{left:8px}
+.solution-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.solution-card{display:flex;flex-direction:column;gap:14px;min-height:188px;padding:24px;border:1px solid var(--line);border-radius:var(--r-lg);background:var(--surface);transition:transform .25s var(--ease),border-color .25s,background .25s}
+.solution-card:hover{transform:translateY(-4px);border-color:var(--g);background:var(--raised)}
+.solution-card .n{font:500 12px/1 var(--mono);color:var(--g-bright)}
+.solution-card h3{font-size:21px;font-weight:800}
+.solution-card p{color:var(--muted);font-size:15px;line-height:1.5}
+.solution-card a{margin-top:auto;color:var(--g-bright);font-size:14px;font-weight:700;text-decoration:none}
+.solution-card a:hover{text-decoration:underline}
+@media (max-width:840px){.solution-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.solution-grid{grid-template-columns:1fr}.solution-card{min-height:0}}
 </style>
 </head>
 <body>
 <a class="skip" href="#conteudo">Pular para o conteúdo</a>
 <template id="lockup"><svg viewBox="0 0 320 100" role="img" aria-label="deckcorp"><defs><linearGradient id="lbA" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#182530"/><stop offset="1" stop-color="#0d1319"/></linearGradient><linearGradient id="lbB" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#33495c"/><stop offset="1" stop-color="#1a2732"/></linearGradient><linearGradient id="lbC" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3ab873"/><stop offset="1" stop-color="#0f6b3d"/></linearGradient><linearGradient id="ltA" x1="0" y1="0" x2=".3" y2="1"><stop offset="0" stop-color="#56d492"/><stop offset=".55" stop-color="#1f9d5c"/><stop offset="1" stop-color="#0f6b3d"/></linearGradient></defs><rect x="22" y="62" width="60" height="16" rx="8" fill="url(#lbA)"/><rect x="15" y="40" width="66" height="17" rx="8.5" fill="url(#lbB)"/><rect x="8" y="17" width="72" height="18" rx="9" fill="url(#lbC)"/><text x="100" y="66" font-family="Inter,sans-serif" font-size="46" font-weight="800" letter-spacing="-1.2"><tspan fill="url(#ltA)">deck</tspan><tspan fill="#f2f0ea">corp</tspan></text></svg></template>
 <header class="nav"><div class="wrap"><a class="logo" href="#topo" data-logo aria-label="DeckCorp, início"></a>
-<nav aria-label="Seções"><a href="#c-prod">Produtos</a><a href="#c-como">Como funciona</a><a href="#c-contato">Contato</a></nav>
+<nav aria-label="Seções"><a href="#c-solucoes">Soluções</a><a href="#c-prod">Produtos</a><a href="#c-como">Como funciona</a><a href="#c-contato">Contato</a></nav>
 <a class="btn" href="#c-contato">Falar com a gente</a></div></header>
 
 <main id="conteudo"><section class="c-hero" id="topo"><div class="grid-bg"></div><div class="orb o1"></div><div class="orb o2"></div><div class="glow" id="glow"></div><div class="wrap">
@@ -198,6 +208,17 @@ footer svg{height:26px;width:auto}
  <svg class="c-draw" viewBox="0 0 1180 140" aria-hidden="true" preserveAspectRatio="none"><path d="M0 110 C 180 110, 240 40, 420 60 S 700 120, 860 70 S 1080 20, 1180 30"/><path class="b" d="M0 125 C 200 125, 300 90, 480 95 S 760 130, 920 100 S 1100 70, 1180 75"/><circle cx="1180" cy="30" r="6"/></svg>
 </div></section>
 <div class="marquee" aria-hidden="true"><div class="track"><span>Atendimento no WhatsApp 24h</span><span>Comanda digital</span><span>Painéis de gestão</span><span>Automação de rotina</span><span>Sites e landing pages</span><span>Apps Android</span><span>Monitor 24h e backup diário</span><span>Atendimento no WhatsApp 24h</span><span>Comanda digital</span><span>Painéis de gestão</span><span>Automação de rotina</span><span>Sites e landing pages</span><span>Apps Android</span><span>Monitor 24h e backup diário</span></div></div>
+
+<section class="sec" id="c-solucoes" style="padding-bottom:40px"><div class="wrap">
+<div class="sec-h rv"><span class="eyebrow">Comece pelo problema</span><h2>O que está dificultando sua rotina?</h2><p>Você não precisa chegar com o nome de um sistema. Conte o que está travando seu trabalho e a gente ajuda a encontrar um primeiro caminho.</p></div>
+<div class="solution-grid">
+ <article class="solution-card rv-r"><span class="n">01 / atendimento</span><h3>Mensagens e clientes espalhados</h3><p>Organize conversas, histórico, leads e próximos contatos em um fluxo mais claro.</p><a href="#c-contato">Quero organizar isso →</a></article>
+ <article class="solution-card rv-r"><span class="n">02 / operação</span><h3>Planilhas e tarefas manuais</h3><p>Transforme uma rotina repetitiva em um painel simples para sua equipe trabalhar.</p><a href="#c-contato">Quero simplificar →</a></article>
+ <article class="solution-card rv-r"><span class="n">03 / vendas</span><h3>Orçamentos sem acompanhamento</h3><p>Crie um caminho para registrar oportunidades e não deixar clientes esquecidos.</p><a href="#c-contato">Quero vender melhor →</a></article>
+ <article class="solution-card rv-r"><span class="n">04 / presença</span><h3>Um site que não ajuda o negócio</h3><p>Construa uma presença digital que explique seu serviço e facilite novos contatos.</p><a href="#c-contato">Quero melhorar meu site →</a></article>
+ <article class="solution-card rv-r"><span class="n">05 / gestão</span><h3>Dados espalhados e decisões difíceis</h3><p>Reúna os indicadores importantes em um painel que ajude você a agir.</p><a href="#c-contato">Quero enxergar melhor →</a></article>
+ <article class="solution-card rv-r"><span class="n">06 / ideia</span><h3>Uma ideia que ainda não virou sistema</h3><p>Comece com um protótipo, teste com pessoas reais e descubra o que vale construir.</p><a href="#c-contato">Quero tirar do papel →</a></article>
+</div></div></section>
 
 <section class="sec" id="c-prod" style="padding-top:40px"><div class="wrap">
 <div class="sec-h rv" style="margin-bottom:28px"><span class="eyebrow">Produtos · arraste pro lado</span><h2>Escolha por onde começar.</h2></div>
