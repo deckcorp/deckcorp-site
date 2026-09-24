@@ -191,6 +191,22 @@ footer svg{height:26px;width:auto}
 .solution-card a:hover{text-decoration:underline}
 @media (max-width:840px){.solution-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:520px){.solution-grid{grid-template-columns:1fr}.solution-card{min-height:0}}
+.build-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.build-group{padding:26px;border:1px solid var(--line);border-radius:var(--r-lg);background:linear-gradient(160deg,var(--surface),var(--void));}
+.build-group .n{font:500 12px/1 var(--mono);color:var(--g-bright)}
+.build-group h3{font-size:24px;font-weight:800;margin:18px 0 20px}
+.build-group ul{list-style:none;display:grid;gap:12px;margin:0;padding:0;color:var(--muted);font-size:15px}
+.build-group li{display:flex;gap:10px;align-items:flex-start}
+.build-group li::before{content:"+";color:var(--g-bright);font:700 16px/1 var(--mono)}
+.build-note{margin-top:18px;color:var(--dim);font-size:14px}
+.faq{display:grid;border-top:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line);padding:20px 0}
+.faq summary{cursor:pointer;list-style:none;font-size:18px;font-weight:750;padding-right:36px;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:4px;top:-2px;color:var(--g-bright);font:400 26px/1 var(--mono)}
+.faq details[open] summary::after{content:"−"}
+.faq details p{max-width:68ch;margin:12px 0 0;color:var(--muted);font-size:15px}
+@media (max-width:840px){.build-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -220,6 +236,15 @@ footer svg{height:26px;width:auto}
  <article class="solution-card rv-r"><span class="n">06 / ideia</span><h3>Uma ideia que ainda não virou sistema</h3><p>Comece com um protótipo, teste com pessoas reais e descubra o que vale construir.</p><a href="#c-contato">Quero tirar do papel →</a></article>
 </div></div></section>
 
+<section class="sec" style="padding-top:40px"><div class="wrap">
+<div class="sec-h rv"><span class="eyebrow">Possibilidades</span><h2>Coisas úteis que podemos construir.</h2><p>Não é um catálogo fechado de produtos prontos. São caminhos para transformar uma necessidade real em uma ferramenta que faça sentido na sua rotina.</p></div>
+<div class="build-grid">
+ <article class="build-group rv-r"><span class="n">01 / organizar</span><h3>Gestão do dia a dia</h3><ul><li>Gestor de clientes e leads</li><li>Painel de vendas e indicadores</li><li>Agenda, reservas e confirmações</li><li>Sistema de tarefas para equipes</li></ul></article>
+ <article class="build-group rv-r"><span class="n">02 / atender</span><h3>Relacionamento</h3><ul><li>Central de atendimento no WhatsApp</li><li>Portal para clientes</li><li>Catálogo e pedidos digitais</li><li>Orçamento e acompanhamento</li></ul></article>
+ <article class="build-group rv-r"><span class="n">03 / crescer</span><h3>Presença e automação</h3><ul><li>Sites e landing pages</li><li>Áreas de membros</li><li>Integrações entre ferramentas</li><li>Aplicativos e sistemas internos</li></ul></article>
+</div><p class="build-note">Cada projeto começa pequeno: primeiro entendemos a rotina, depois escolhemos o que realmente vale construir.</p>
+</div></section>
+
 <section class="sec" id="c-prod" style="padding-top:40px"><div class="wrap">
 <div class="sec-h rv" style="margin-bottom:28px"><span class="eyebrow">Produtos · arraste pro lado</span><h2>Escolha por onde começar.</h2></div>
 <div class="hscroll" tabindex="0" aria-label="Produtos">
@@ -243,6 +268,15 @@ footer svg{height:26px;width:auto}
  <div class="rv-l"><span class="n">02</span><b>Protótipo</b><p>Telas clicáveis pra você testar no celular e ajustar antes de construir.</p></div>
  <div class="rv-l"><span class="n">03</span><b>Construção</b><p>Com o protótipo aprovado, construímos com o mesmo visual.</p></div>
  <div class="rv-l"><span class="n">04</span><b>No ar</b><p>Publicado com vigia 24h, backup diário e suporte direto.</p></div>
+</div></div></section>
+
+<section class="sec" style="padding-top:0"><div class="wrap">
+<div class="sec-h rv"><span class="eyebrow">Dúvidas comuns</span><h2>Antes de começar.</h2></div>
+<div class="faq rv">
+ <details><summary>Preciso saber exatamente qual sistema quero?</summary><p>Não. Você pode começar contando o problema, como trabalha hoje e o que gostaria de melhorar. A primeira conversa serve para transformar isso em um recorte possível.</p></details>
+ <details><summary>Vocês fazem sistemas que ainda não existem?</summary><p>Sim, quando o projeto faz sentido. Primeiro criamos um protótipo clicável para testar a ideia e ajustar o fluxo antes de investir na construção.</p></details>
+ <details><summary>Posso começar com uma versão pequena?</summary><p>É o caminho recomendado. Uma primeira versão menor permite colocar o sistema em uso, ouvir as pessoas e evoluir com base no que realmente acontece.</p></details>
+ <details><summary>O que acontece depois que o sistema fica pronto?</summary><p>A solução precisa continuar funcionando. Combinamos hospedagem, suporte, monitoramento e melhorias de acordo com o tipo de projeto.</p></details>
 </div></div></section>
 
 <section class="sec contact-bg" id="c-contato"><div class="grid-bg"></div><div class="orb o1" style="top:10%"></div><div class="wrap" style="position:relative;z-index:1"><div class="rv">
