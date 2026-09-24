@@ -124,7 +124,8 @@ footer svg{height:26px;width:auto}
 }
 @media (max-width:640px){
   .wrap{padding-inline:16px}
-  .nav nav{display:none}
+  .nav nav{display:flex;gap:14px;max-width:58vw;overflow-x:auto;scrollbar-width:none;font-size:12px;white-space:nowrap}
+  .nav nav::-webkit-scrollbar{display:none}
   .sec{padding-block:80px}
   .contact{grid-template-columns:1fr}
   .c-hero .row{grid-template-columns:1fr}
