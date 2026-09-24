@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'none'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'; manifest-src 'self'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>DeckCorp · Atendente IA, PedeAí e sistemas sob medida</title>
+<meta name="description" content="Tecnologia que atende, organiza e vende por você: atendente com IA no WhatsApp, comanda digital PedeAí pra bar e restaurante, e sistemas sob medida. Maceió/AL.">
+<link rel="canonical" href="https://deckcorp.com.br/">
+<meta name="theme-color" content="#0b0f14">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="DeckCorp">
+<meta property="og:title" content="DeckCorp · Tecnologia que trabalha por você">
+<meta property="og:description" content="Atendente IA no WhatsApp, comanda digital PedeAí e sistemas sob medida.">
+<meta property="og:url" content="https://deckcorp.com.br/">
+<meta property="og:image" content="https://deckcorp.com.br/og.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"DeckCorp","url":"https://deckcorp.com.br/","logo":"https://deckcorp.com.br/favicon.svg","email":"wan@deckcorp.com.br","address":{"@type":"PostalAddress","addressLocality":"Maceió","addressRegion":"AL","addressCountry":"BR"}}</script>
+<style>
+:root{
+  color-scheme:dark;
+  --bg:#0b0f14;--void:#070a0e;--surface:#111820;--raised:#18222d;--line:#1d2933;--line2:#2a3845;
+  --txt:#dce6ee;--muted:#9fb0bf;--dim:#5f7488;
+  --g:#1f9d5c;--g-hi:#3ab873;--g-deep:#145c37;--g-soft:#10261d;--g-bright:#6bf0a1;--on-g:#f2f0ea;
+  --warn:#f4c95d;--navy1:#33495c;--navy2:#1a2732;--navy3:#182530;--navy4:#0d1319;
+  --r-md:12px;--r-lg:16px;--r-xl:24px;--ease:cubic-bezier(.2,.8,.2,1);
+  --sans:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Consolas,monospace;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--txt);font:400 16px/1.6 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+h1,h2,h3{margin:0;text-wrap:balance;letter-spacing:-.03em}
+p{margin:0}
+.wrap{width:min(1180px,100%);margin:0 auto;padding-inline:24px}
+svg.i{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round;flex:none}
+/* ---- comuns ---- */
+.nav{position:sticky;top:0;z-index:50;background:rgba(11,15,20,.78);backdrop-filter:blur(14px);border-bottom:1px solid transparent;transition:border-color .3s}
+.nav.scrolled{border-bottom-color:var(--line)}
+.nav .wrap{display:flex;align-items:center;gap:28px;min-height:72px}
+.nav .logo svg{height:34px;width:auto;display:block}
+.nav nav{display:flex;gap:26px;margin-left:auto;font-size:14.5px;font-weight:500;color:var(--muted)}
+.nav nav a{text-decoration:none;transition:color .2s}
+.nav nav a:hover{color:var(--txt)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55em;min-height:48px;padding:0 22px;border-radius:var(--r-md);font:650 15.5px/1 var(--sans);text-decoration:none;cursor:pointer;border:1px solid var(--g-deep);background:linear-gradient(180deg,var(--g-hi),var(--g));color:var(--on-g);transition:transform .2s var(--ease),box-shadow .2s,filter .2s;white-space:nowrap}
+.btn:hover{transform:translateY(-2px);box-shadow:0 0 0 1px rgba(31,157,92,.35),0 12px 36px -10px rgba(31,157,92,.55)}
+.btn .arr{transition:transform .25s var(--ease)}
+.btn:hover .arr{transform:translateX(4px)}
+.btn.ghost{background:transparent;border-color:var(--line2);color:var(--txt)}
+.btn.ghost:hover{border-color:var(--muted);box-shadow:none}
+.btn:focus-visible,.nav a:focus-visible,.card-link:focus-visible{outline:2px solid var(--g-bright);outline-offset:3px}
+.eyebrow{font:650 12px/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--g-bright)}
+.sec{padding-block:112px}
+.sec-h{display:grid;gap:14px;max-width:720px;margin-bottom:52px}
+.sec-h h2{font-size:clamp(32px,4.4vw,50px);line-height:1.05;font-weight:800}
+.sec-h p{color:var(--muted);font-size:18px;max-width:60ch}
+.price{font:500 13px/1 var(--mono);color:var(--muted)}
+.price b{font:800 26px/1 var(--sans);color:var(--txt);letter-spacing:-.02em}
+.tag{display:inline-flex;align-items:center;gap:6px;padding:5px 11px;border-radius:999px;font:650 12px/1 var(--sans);background:var(--g-soft);color:var(--g-bright);border:1px solid var(--g-deep)}
+.tag.dot::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor;animation:pulse 2s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(107,240,161,.6)}70%{box-shadow:0 0 0 8px rgba(107,240,161,0)}100%{box-shadow:0 0 0 0 rgba(107,240,161,0)}}
+.feats{list-style:none;padding:0;margin:0;display:grid;gap:10px;font-size:15px;color:var(--muted)}
+.feats li{display:flex;gap:10px;align-items:flex-start}
+.feats li::before{content:"";flex:none;width:18px;height:18px;margin-top:3px;border-radius:50%;background:var(--g-soft) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236bf0a1' stroke-width='3' stroke-linecap='round'%3E%3Cpath d='M6 12l4 4 8-9'/%3E%3C/svg%3E") center/11px no-repeat;border:1px solid var(--g-deep)}
+.contact{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:32px}
+.contact a{display:flex;align-items:center;gap:16px;padding:22px;border-radius:var(--r-lg);background:var(--surface);border:1px solid var(--line);text-decoration:none;transition:border-color .25s,transform .25s var(--ease)}
+.contact a:hover{border-color:var(--g);transform:translateY(-3px)}
+.contact .ic{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;background:var(--g-soft);color:var(--g-bright);border:1px solid var(--g-deep)}
+.contact small{display:block;color:var(--muted);font-size:13px}
+.contact b{font-size:17px}
+.sample{font:500 11px/1 var(--mono);color:var(--warn);border:1px dashed #5a4a1e;border-radius:6px;padding:3px 6px;margin-left:6px;vertical-align:middle}
+footer{border-top:1px solid var(--line);padding-block:40px 110px;color:var(--dim);font-size:14px}
+footer .wrap{display:flex;gap:20px;justify-content:space-between;align-items:center;flex-wrap:wrap}
+footer svg{height:26px;width:auto}
+/* revelação ao rolar: só com rolagem-animada do navegador (sem JS e sem esconder conteúdo) */
+@supports (animation-timeline:view()){
+  .rv{animation:rise linear both;animation-timeline:view();animation-range:entry 0% cover 28%}
+  .rv-l{animation:slideL linear both;animation-timeline:view();animation-range:entry 0% cover 30%}
+  .rv-r{animation:slideR linear both;animation-timeline:view();animation-range:entry 0% cover 30%}
+  @keyframes rise{from{opacity:.001;transform:translateY(48px) scale(.98)}to{opacity:1;transform:none}}
+  @keyframes slideL{from{opacity:.001;transform:translateX(-60px)}to{opacity:1;transform:none}}
+  @keyframes slideR{from{opacity:.001;transform:translateX(60px)}to{opacity:1;transform:none}}
+}
+/* ================= VERSÃO C · EDITORIAL ================= */
+.c-hero{padding-block:88px 40px;position:relative}
+.c-hero h1{font-size:clamp(46px,9vw,132px);line-height:.9;font-weight:900;letter-spacing:-.055em}
+.c-hero h1 .rot{display:inline-grid;vertical-align:bottom;height:.95em;overflow:hidden}
+.c-hero h1 .rot span{grid-area:1/1;color:var(--g-bright);transform:translateY(110%);opacity:0;transition:transform .7s var(--ease),opacity .5s}
+.c-hero h1 .rot span.on{transform:none;opacity:1}
+.c-hero h1 .rot span.out{transform:translateY(-110%);opacity:0}
+.c-hero .row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:40px;align-items:end;margin-top:44px;padding-top:28px;border-top:1px solid var(--line)}
+.c-hero .lead{font-size:19px;color:var(--muted);max-width:52ch}
+.c-draw{width:100%;height:auto;margin-top:36px;display:block}
+.c-draw path{fill:none;stroke:var(--g);stroke-width:2;stroke-linecap:round;stroke-dasharray:1400;stroke-dashoffset:1400;animation:draw 3.2s var(--ease) .3s forwards}
+.c-draw path.b{stroke:var(--navy1);animation-delay:.6s}
+.c-draw circle{fill:var(--g-bright);opacity:0;animation:fadeUp .5s ease 3s forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.hscroll{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding:8px 24px 28px;margin-inline:-24px;scrollbar-width:thin}
+.c-card{flex:0 0 min(460px,86vw);scroll-snap-align:start;display:flex;flex-direction:column;gap:18px;padding:34px;border-radius:28px;border:1px solid var(--line);background:var(--surface);min-height:440px;transition:transform .35s var(--ease)}
+.c-card:hover{transform:translateY(-6px)}
+.c-card .no{font:500 13px/1 var(--mono);color:var(--dim)}
+.c-card h3{font-size:40px;font-weight:900;line-height:1}
+.c-card > p{color:var(--muted);font-size:17px}
+.c-card .foot{margin-top:auto;display:flex;justify-content:space-between;align-items:end;gap:12px;flex-wrap:wrap}
+.c-card.g{background:linear-gradient(160deg,#145c37,#0f3d26 60%,#0b1f16);border-color:#1f9d5c}
+.c-card.g > p,.c-card.g .feats{color:#cfe9da}
+.c-card.g .no{color:#9fdcbc}
+.c-quote{font-size:clamp(28px,4vw,48px);line-height:1.12;font-weight:800;letter-spacing:-.03em;max-width:22ch}
+.c-quote em{font-style:normal;color:var(--g-bright)}
+.c-list{display:grid;border-top:1px solid var(--line)}
+.c-list div{display:grid;grid-template-columns:80px minmax(0,1fr) minmax(0,1.2fr);gap:24px;padding:28px 0;border-bottom:1px solid var(--line);align-items:baseline;transition:padding .3s var(--ease),background .3s}
+.c-list div:hover{padding-left:14px;background:linear-gradient(90deg,rgba(31,157,92,.08),transparent)}
+.c-list .n{font:500 14px/1 var(--mono);color:var(--g-bright)}
+.c-list b{font-size:24px;font-weight:800;letter-spacing:-.02em}
+.c-list p{color:var(--muted)}
+@media (max-width:980px){
+}
+@media (max-width:640px){
+  .wrap{padding-inline:16px}
+  .nav nav{display:none}
+  .sec{padding-block:80px}
+  .contact{grid-template-columns:1fr}
+  .c-hero .row{grid-template-columns:1fr}
+  .c-list div{grid-template-columns:48px 1fr}.c-list p{grid-column:2}
+  .hscroll{padding-inline:16px;margin-inline:-16px}
+}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.c-hero h1 .rot span.on{transform:none;opacity:1}.c-draw path{stroke-dashoffset:0}.c-draw circle{opacity:1}}
+
+.glow{display:none}
+.legal{max-width:60ch}
+.skip{position:absolute;left:-999px;top:8px;z-index:200;background:var(--g);color:var(--on-g);padding:10px 14px;border-radius:8px}.skip:focus{left:8px}
+</style>
+</head>
+<body>
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+<template id="lockup"><svg viewBox="0 0 320 100" role="img" aria-label="deckcorp"><defs><linearGradient id="lbA" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#182530"/><stop offset="1" stop-color="#0d1319"/></linearGradient><linearGradient id="lbB" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#33495c"/><stop offset="1" stop-color="#1a2732"/></linearGradient><linearGradient id="lbC" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3ab873"/><stop offset="1" stop-color="#0f6b3d"/></linearGradient><linearGradient id="ltA" x1="0" y1="0" x2=".3" y2="1"><stop offset="0" stop-color="#56d492"/><stop offset=".55" stop-color="#1f9d5c"/><stop offset="1" stop-color="#0f6b3d"/></linearGradient></defs><rect x="22" y="62" width="60" height="16" rx="8" fill="url(#lbA)"/><rect x="15" y="40" width="66" height="17" rx="8.5" fill="url(#lbB)"/><rect x="8" y="17" width="72" height="18" rx="9" fill="url(#lbC)"/><text x="100" y="66" font-family="Inter,sans-serif" font-size="46" font-weight="800" letter-spacing="-1.2"><tspan fill="url(#ltA)">deck</tspan><tspan fill="#f2f0ea">corp</tspan></text></svg></template>
+<header class="nav"><div class="wrap"><a class="logo" href="#topo" data-logo aria-label="DeckCorp, início"></a>
+<nav aria-label="Seções"><a href="#c-prod">Produtos</a><a href="#c-como">Como funciona</a><a href="#c-contato">Contato</a></nav>
+<a class="btn" href="#c-contato">Falar com a gente</a></div></header>
+
+<main id="conteudo"><section class="c-hero" id="topo"><div class="wrap">
+ <span class="eyebrow">DeckCorp · tecnologia pra pequeno negócio</span>
+ <h1 style="margin-top:22px">Tecnologia que<br><span class="rot" id="rot"><span class="on">atende</span><span>organiza</span><span>vende</span><span>trabalha</span></span><br>por você.</h1>
+ <div class="row"><p class="lead">Atendente com IA no WhatsApp, comanda digital pra bar e restaurante, e sistemas sob medida. Feitos em Maceió, com suporte de quem constrói.</p>
+ <div style="display:flex;gap:12px;flex-wrap:wrap"><a class="btn" href="#c-prod">Ver produtos <span class="arr">→</span></a><a class="btn ghost" href="#c-contato">Orçamento</a></div></div>
+ <svg class="c-draw" viewBox="0 0 1180 140" aria-hidden="true" preserveAspectRatio="none"><path d="M0 110 C 180 110, 240 40, 420 60 S 700 120, 860 70 S 1080 20, 1180 30"/><path class="b" d="M0 125 C 200 125, 300 90, 480 95 S 760 130, 920 100 S 1100 70, 1180 75"/><circle cx="1180" cy="30" r="6"/></svg>
+</div></section>
+
+<section class="sec" id="c-prod" style="padding-top:40px"><div class="wrap">
+<div class="sec-h rv" style="margin-bottom:28px"><span class="eyebrow">Produtos · arraste pro lado</span><h2>Escolha por onde começar.</h2></div>
+<div class="hscroll" tabindex="0" aria-label="Produtos">
+ <article class="c-card g rv-r"><span class="no">01 / produto</span><h3>Atendente IA</h3><p>Seu WhatsApp respondendo clientes 24 horas, com o jeito da sua empresa. Quando precisa de gente, chama você.</p>
+  <ul class="feats"><li>Dúvidas, preços e horários</li><li>Passa a conversa pra você</li><li>Painel com as conversas</li></ul>
+  <div class="foot"><span class="price" style="color:#cfe9da">a partir de<br><b style="color:#fff">R$ 300</b>/mês</span><a class="btn" style="background:#f2f0ea;color:#0b1f16;border-color:#f2f0ea" href="#c-contato">Quero um atendente</a></div></article>
+ <article class="c-card rv-r"><span class="no">02 / produto</span><h3>PedeAí</h3><p>Comanda digital pra bar e restaurante. Garçom, cozinha e caixa no mesmo ritmo, mesmo sem internet.</p>
+  <ul class="feats"><li>Pedido direto na cozinha</li><li>Pix, troco e divisão da conta</li><li>Relatório no fechamento</li></ul>
+  <div class="foot"><span class="price">em uso num<br><b style="font-size:18px">bar piloto</b></span><a class="btn" href="https://pedeai.deckcorp.com.br" target="_blank" rel="noopener">Teste no seu bar</a></div></article>
+ <article class="c-card rv-r"><span class="no">03 / serviço</span><h3>Sob medida</h3><p>Painéis, automações, sites e apps em cima da sua rotina. Você testa o protótipo antes da construção.</p>
+  <ul class="feats"><li>Protótipo clicável primeiro</li><li>Hospedagem, monitor e backup</li><li>Suporte com quem construiu</li></ul>
+  <div class="foot"><span class="price">sob<br><b style="font-size:18px">orçamento</b></span><a class="btn" href="#c-contato">Contar meu projeto</a></div></article>
+</div></div></section>
+
+<section class="sec" style="padding-top:40px"><div class="wrap"><p class="c-quote rv">A gente não entrega só o sistema. <em>Entrega ele no ar, vigiado e com backup,</em> pra você não ter que pensar nisso.</p></div></section>
+
+<section class="sec" id="c-como" style="padding-top:0"><div class="wrap">
+<div class="sec-h rv"><span class="eyebrow">Como funciona</span><h2>Quatro passos, nenhuma surpresa.</h2></div>
+<div class="c-list">
+ <div class="rv-l"><span class="n">01</span><b>Conversa</b><p>Você conta o problema. A gente entende como sua operação roda hoje.</p></div>
+ <div class="rv-l"><span class="n">02</span><b>Protótipo</b><p>Telas clicáveis pra você testar no celular e ajustar antes de construir.</p></div>
+ <div class="rv-l"><span class="n">03</span><b>Construção</b><p>Com o protótipo aprovado, construímos com o mesmo visual.</p></div>
+ <div class="rv-l"><span class="n">04</span><b>No ar</b><p>Publicado com vigia 24h, backup diário e suporte direto.</p></div>
+</div></div></section>
+
+<section class="sec" id="c-contato" style="padding-top:0"><div class="wrap"><div class="rv">
+<span class="eyebrow">Contato</span><h2 style="font-size:clamp(40px,7vw,96px);line-height:.92;font-weight:900;letter-spacing:-.05em;margin-top:16px">Vamos<br>conversar?</h2>
+<div class="contact"><a href="#" data-wa target="_blank" rel="noopener"><span class="ic"><svg class="i" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 1-11.8 7L4 20l1.1-4.1A8 8 0 1 1 20 12z"/></svg></span><span><small>WhatsApp</small><b data-wa-txt>(82) 90000-0000</b></span></a>
+<a href="mailto:wan@deckcorp.com.br"><span class="ic"><svg class="i" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span><span><small>E-mail</small><b>wan@deckcorp.com.br</b></span></a></div>
+</div></div></section>
+</main>
+<footer><div class="wrap"><span data-logo></span><span class="legal">DeckCorp · Maceió/AL · © 2026 · Este site não usa cookies nem coleta dados: o contato é só pelo WhatsApp ou e-mail.</span></div></footer>
+<script>
+(function(){
+"use strict";
+/* ===== CONFIG: número do WhatsApp comercial (só dígitos, com DDD). Vazio = esconde o botão. ===== */
+var WHATSAPP="";
+var MSG="Olá! Vim pelo site da DeckCorp e quero conversar sobre um projeto.";
+var reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
+var tpl=document.getElementById("lockup").innerHTML;
+document.querySelectorAll("[data-logo]").forEach(function(el,i){el.innerHTML=tpl.replace(/id="(l[bt][A-C])"/g,'id="$1'+i+'"').replace(/url\(#(l[bt][A-C])\)/g,"url(#$1"+i+")");});
+document.querySelectorAll("[data-wa]").forEach(function(a){
+  if(!WHATSAPP){a.remove();return;}
+  var d=WHATSAPP.replace(/\D/g,"");if(d.length<=11)d="55"+d;
+  a.href="https://wa.me/"+d+"?text="+encodeURIComponent(MSG);
+  var n=d.slice(2),t=a.querySelector("[data-wa-txt]");if(t)t.textContent="("+n.slice(0,2)+") "+n.slice(2,-4)+"-"+n.slice(-4);
+});
+addEventListener("scroll",function(){document.querySelector(".nav").classList.toggle("scrolled",scrollY>8);},{passive:true});
+var rot=[].slice.call(document.querySelectorAll("#rot span")),ri=0;
+if(!reduce)setInterval(function(){var a=rot[ri];ri=(ri+1)%rot.length;var b=rot[ri];a.classList.remove("on");a.classList.add("out");b.classList.remove("out");b.classList.add("on");setTimeout(function(){a.classList.remove("out");},700);},2200);
+})();
+</script>
+</body>
+</html>

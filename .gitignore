@@ -1,0 +1,6 @@
+# Só o site vai pro repositório público. Rascunhos e documentos ficam no Mac.
+prototipos/
+docs/
+assets/
+.DS_Store
+*.bak

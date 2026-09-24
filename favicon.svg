@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100" role="img" aria-label="deck">
+  <defs>
+    <linearGradient id="barBack" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#182530"/><stop offset="1" stop-color="#0d1319"/>
+    </linearGradient>
+    <linearGradient id="barMid" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#33495c"/><stop offset="1" stop-color="#1a2732"/>
+    </linearGradient>
+    <linearGradient id="barFront" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3ab873"/><stop offset="1" stop-color="#0f6b3d"/>
+    </linearGradient>
+    <linearGradient id="gloss" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="shadow" x="-60%" y="-60%" width="220%" height="220%">
+      <feDropShadow dx="0" dy="2.5" stdDeviation="2.6" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+  <g filter="url(#shadow)">
+    <rect x="22" y="62" width="60" height="16" rx="8" fill="url(#barBack)"/>
+    <rect x="15" y="40" width="66" height="17" rx="8.5" fill="url(#barMid)"/>
+    <rect x="8" y="17" width="72" height="18" rx="9" fill="url(#barFront)"/>
+    <rect x="8" y="17" width="72" height="9" rx="9" fill="url(#gloss)"/>
+  </g>
+</svg>
