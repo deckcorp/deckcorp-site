@@ -112,8 +112,6 @@ footer svg{height:26px;width:auto}
 .c-card.g{background:linear-gradient(160deg,#145c37,#0f3d26 60%,#0b1f16);border-color:#1f9d5c}
 .c-card.g > p,.c-card.g .feats{color:#cfe9da}
 .c-card.g .no{color:#9fdcbc}
-.c-quote{font-size:clamp(28px,4vw,48px);line-height:1.12;font-weight:800;letter-spacing:-.03em;max-width:22ch}
-.c-quote em{font-style:normal;color:var(--g-bright)}
 .c-list{display:grid;border-top:1px solid var(--line)}
 .c-list div{display:grid;grid-template-columns:80px minmax(0,1fr) minmax(0,1.2fr);gap:24px;padding:28px 0;border-bottom:1px solid var(--line);align-items:baseline;transition:padding .3s var(--ease),background .3s}
 .c-list div:hover{padding-left:14px;background:linear-gradient(90deg,rgba(31,157,92,.08),transparent)}
@@ -146,12 +144,6 @@ footer svg{height:26px;width:auto}
 @keyframes floaty{0%,100%{translate:0 0}50%{translate:0 -8px}}
 .stack .lbl{position:absolute;font:500 12px/1 var(--mono);color:var(--muted);background:rgba(17,24,32,.85);border:1px solid var(--line2);padding:7px 10px;border-radius:8px;animation:fadeUp .8s var(--ease) both}
 .stack .l1{top:18px;left:-6%;animation-delay:1.3s}.stack .l2{top:112px;left:0;animation-delay:1.45s}.stack .l3{top:208px;left:4%;animation-delay:1.6s}
-.marquee{border-block:1px solid var(--line);overflow:hidden;padding-block:18px;background:var(--void)}
-.marquee .track{display:flex;gap:44px;width:max-content;animation:mq 34s linear infinite;font:600 15px/1 var(--sans);color:var(--dim)}
-.marquee .track span{display:flex;align-items:center;gap:44px;white-space:nowrap}
-.marquee .track span::after{content:"";width:8px;height:8px;border-radius:2px;background:var(--g);opacity:.6}
-@keyframes mq{to{transform:translateX(-50%)}}
-
 /* fundo vivo (vindo da versão A): grade andando + brilhos flutuando */
 .grid-bg{animation:gridPan 26s linear infinite}
 @keyframes gridPan{to{background-position:48px 48px,48px 48px}}
@@ -230,8 +222,8 @@ footer svg{height:26px;width:auto}
 <a class="skip" href="#conteudo">Pular para o conteúdo</a>
 <template id="lockup"><svg viewBox="0 0 320 100" role="img" aria-label="deckcorp"><defs><linearGradient id="lbA" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#182530"/><stop offset="1" stop-color="#0d1319"/></linearGradient><linearGradient id="lbB" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#33495c"/><stop offset="1" stop-color="#1a2732"/></linearGradient><linearGradient id="lbC" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3ab873"/><stop offset="1" stop-color="#0f6b3d"/></linearGradient><linearGradient id="ltA" x1="0" y1="0" x2=".3" y2="1"><stop offset="0" stop-color="#56d492"/><stop offset=".55" stop-color="#1f9d5c"/><stop offset="1" stop-color="#0f6b3d"/></linearGradient></defs><rect x="22" y="62" width="60" height="16" rx="8" fill="url(#lbA)"/><rect x="15" y="40" width="66" height="17" rx="8.5" fill="url(#lbB)"/><rect x="8" y="17" width="72" height="18" rx="9" fill="url(#lbC)"/><text x="100" y="66" font-family="Inter,sans-serif" font-size="46" font-weight="800" letter-spacing="-1.2"><tspan fill="url(#ltA)">deck</tspan><tspan fill="#f2f0ea">corp</tspan></text></svg></template>
 <header class="nav"><div class="wrap"><a class="logo" href="#topo" data-logo aria-label="DeckCorp, início"></a>
-<nav aria-label="Seções"><a href="#explorar">Explorar</a><a href="/projetos.html">Projetos</a><a href="#c-como">Como funciona</a><a href="#c-contato">Contato</a></nav>
-<a class="btn" href="#c-contato">Falar com a gente</a></div></header>
+<nav aria-label="Seções"><a href="#explorar">Explorar</a><a href="/projetos.html">Projetos</a><a href="#c-como">Como funciona</a></nav>
+<a class="btn" href="/solucoes/sistemas-sob-medida.html#briefing">Preencher briefing</a></div></header>
 
 <main id="conteudo"><section class="c-hero" id="topo"><div class="grid-bg"></div><div class="orb o1"></div><div class="orb o2"></div><div class="glow" id="glow"></div><div class="wrap">
  <span class="eyebrow ld">DeckCorp · tecnologia pra pequeno negócio · todo o Brasil</span>
@@ -240,8 +232,6 @@ footer svg{height:26px;width:auto}
  <div style="display:flex;gap:12px;flex-wrap:wrap"><a class="btn" href="#c-prod">Ver produtos <span class="arr">→</span></a><a class="btn ghost" href="/solucoes/sistemas-sob-medida.html#briefing">Quero explicar o que preciso</a></div></div>
  <svg class="c-draw" viewBox="0 0 1180 140" aria-hidden="true" preserveAspectRatio="none"><path d="M0 110 C 180 110, 240 40, 420 60 S 700 120, 860 70 S 1080 20, 1180 30"/><path class="b" d="M0 125 C 200 125, 300 90, 480 95 S 760 130, 920 100 S 1100 70, 1180 75"/><circle cx="1180" cy="30" r="6"/></svg>
 </div></section>
-<div class="marquee" aria-hidden="true"><div class="track"><span>Atendimento no WhatsApp 24h</span><span>Comanda digital</span><span>Painéis de gestão</span><span>Automação de rotina</span><span>Sites e landing pages</span><span>Apps Android</span><span>Monitor 24h e backup diário</span><span>Atendimento no WhatsApp 24h</span><span>Comanda digital</span><span>Painéis de gestão</span><span>Automação de rotina</span><span>Sites e landing pages</span><span>Apps Android</span><span>Monitor 24h e backup diário</span></div></div>
-
 <section class="sec" id="explorar" style="padding-top:72px"><div class="wrap">
 <div class="sec-h rv"><span class="eyebrow">Escolha seu caminho</span><h2>Veja só o que interessa para você.</h2><p>Comece por uma intenção. As próximas opções aparecem sem transformar a home em um catálogo.</p></div>
 <div class="explore">
@@ -271,8 +261,6 @@ footer svg{height:26px;width:auto}
   <div class="foot"><span class="price">sob<br><b style="font-size:18px">orçamento</b></span><a class="btn" href="/solucoes/sistemas-sob-medida.html#briefing">Contar meu projeto</a></div></article>
 </div></div></section>
 
-<section class="sec" style="padding-top:40px"><div class="wrap"><p class="c-quote rv">A gente não entrega só o sistema. <em>Entrega ele no ar, vigiado e com backup,</em> pra você não ter que pensar nisso.</p></div></section>
-
 <section class="sec" id="c-como" style="padding-top:0"><div class="wrap">
 <div class="sec-h rv"><span class="eyebrow">Como funciona</span><h2>Quatro passos, nenhuma surpresa.</h2></div>
 <div class="c-list">
@@ -283,9 +271,8 @@ footer svg{height:26px;width:auto}
 </div></div></section>
 
 <section class="sec contact-bg" id="c-contato"><div class="grid-bg"></div><div class="orb o1" style="top:10%"></div><div class="wrap" style="position:relative;z-index:1"><div class="rv">
-<span class="eyebrow">Contato</span><h2 style="font-size:clamp(40px,7vw,96px);line-height:.92;font-weight:900;letter-spacing:-.05em;margin-top:16px">Vamos<br>conversar?</h2>
-<div class="contact"><a href="#" data-wa target="_blank" rel="noopener"><span class="ic"><svg class="i" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 1-11.8 7L4 20l1.1-4.1A8 8 0 1 1 20 12z"/></svg></span><span><small>WhatsApp</small><b data-wa-txt>(82) 90000-0000</b></span></a>
-<a href="mailto:wan@deckcorp.com.br"><span class="ic"><svg class="i" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span><span><small>E-mail</small><b>wan@deckcorp.com.br</b></span></a></div>
+<span class="eyebrow">Próximo passo</span><h2 style="font-size:clamp(40px,7vw,96px);line-height:.92;font-weight:900;letter-spacing:-.05em;margin-top:16px">Comece pelo<br>que precisa.</h2>
+<p class="lead">Responda algumas perguntas e receba um caminho organizado para a primeira conversa.</p><div class="actions"><a class="btn" href="/solucoes/sistemas-sob-medida.html#briefing">Preencher meu briefing</a><a class="btn ghost" href="mailto:wan@deckcorp.com.br">Enviar e-mail direto</a></div>
 </div></div></section>
 </main>
 <footer><div class="wrap"><span data-logo></span><nav class="footer-nav" aria-label="Links do rodapé"><a href="/projetos.html">Projetos</a><a href="/segmentos.html">Segmentos</a><a href="/servicos/site-para-pequenos-negocios.html">Sites para negócios</a><a href="mailto:wan@deckcorp.com.br">Contato</a></nav><span class="legal">DeckCorp · Atendimento online em todo o Brasil · © 2026 · Este site não usa cookies nem coleta dados: o contato é só pelo WhatsApp ou e-mail.</span></div></footer>
