@@ -10,6 +10,7 @@
 <link rel="canonical" href="https://deckcorp.com.br/">
 <meta name="theme-color" content="#0b0f14">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/marca/app-icon-180.png">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="DeckCorp">
@@ -45,7 +46,7 @@ svg.i{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.75;str
 .nav{position:sticky;top:0;z-index:50;background:rgba(11,15,20,.78);backdrop-filter:blur(14px);border-bottom:1px solid transparent;transition:border-color .3s}
 .nav.scrolled{border-bottom-color:var(--line)}
 .nav .wrap{display:flex;align-items:center;gap:28px;min-height:72px}
-.nav .logo svg{height:34px;width:auto;display:block}
+.nav .logo svg,.nav .logo img{height:34px;width:auto;display:block}
 .nav nav{display:flex;gap:26px;margin-left:auto;font-size:14.5px;font-weight:500;color:var(--muted)}
 .nav nav a{text-decoration:none;transition:color .2s}
 .nav nav a:hover{color:var(--txt)}
@@ -78,7 +79,7 @@ svg.i{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.75;str
 .sample{font:500 11px/1 var(--mono);color:var(--warn);border:1px dashed #5a4a1e;border-radius:6px;padding:3px 6px;margin-left:6px;vertical-align:middle}
 footer{border-top:1px solid var(--line);padding-block:40px 110px;color:var(--dim);font-size:14px}
 footer .wrap{display:flex;gap:20px;justify-content:space-between;align-items:center;flex-wrap:wrap}
-footer svg{height:26px;width:auto}
+footer svg,footer [data-logo] img{height:26px;width:auto;display:block}
 /* revelação ao rolar: só com rolagem-animada do navegador (sem JS e sem esconder conteúdo) */
 @supports (animation-timeline:view()){
   .rv{animation:rise linear both;animation-timeline:view();animation-range:entry 0% cover 28%}
@@ -231,7 +232,7 @@ footer svg{height:26px;width:auto}
 </head>
 <body>
 <a class="skip" href="#conteudo">Pular para o conteúdo</a>
-<template id="lockup"><svg viewBox="0 0 320 100" role="img" aria-label="deckcorp"><defs><linearGradient id="lbA" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#182530"/><stop offset="1" stop-color="#0d1319"/></linearGradient><linearGradient id="lbB" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#33495c"/><stop offset="1" stop-color="#1a2732"/></linearGradient><linearGradient id="lbC" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3ab873"/><stop offset="1" stop-color="#0f6b3d"/></linearGradient><linearGradient id="ltA" x1="0" y1="0" x2=".3" y2="1"><stop offset="0" stop-color="#56d492"/><stop offset=".55" stop-color="#1f9d5c"/><stop offset="1" stop-color="#0f6b3d"/></linearGradient></defs><rect x="22" y="62" width="60" height="16" rx="8" fill="url(#lbA)"/><rect x="15" y="40" width="66" height="17" rx="8.5" fill="url(#lbB)"/><rect x="8" y="17" width="72" height="18" rx="9" fill="url(#lbC)"/><text x="100" y="66" font-family="Inter,sans-serif" font-size="46" font-weight="800" letter-spacing="-1.2"><tspan fill="url(#ltA)">deck</tspan><tspan fill="#f2f0ea">corp</tspan></text></svg></template>
+<template id="lockup"><img src="/marca/deckcorp-lockup-on-dark.svg" alt="DeckCorp" width="143" height="34"></template>
 <header class="nav"><div class="wrap"><a class="logo" href="#topo" data-logo aria-label="DeckCorp, início"></a>
 <nav aria-label="Seções"><a href="#explorar">Explorar</a><a href="/projetos.html">Projetos</a><a href="#c-como">Como funciona</a></nav>
 <a class="btn" href="/solucoes/sistemas-sob-medida.html#briefing">Preencher briefing</a></div></header>
